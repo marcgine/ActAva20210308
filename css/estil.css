@@ -1,0 +1,317 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: Antiga;
+  src: url(../fonts/Arcade.ttf);
+}
+
+@font-face {
+  font-family: Enunciat;
+  src: url(../fonts/OdinRounded.otf);
+}
+
+/* -- INICI Definició de constants a css -- */
+:root {
+  --vermell: #ff0000;
+  --negre:#000000;
+  --blanc: #ffffff;
+  --verd: #00b894;
+  --groc: #fdcb6e;
+  --grisclar: #bbbbbb;
+
+  --fons: #0984e3;
+  --ombra: #74b9ff;
+  
+  /* seccio */
+  --seccioFons: var(--fons);
+  --seccioVora: var(--blanc);
+  --seccioOmbra: var(--ombra);
+    /* boto */
+    --botoActiuFons:var(--verd);
+    --botoActiuText:var(--blanc);
+    --botoActiuVora:var(--blanc);
+    --botoActiuOmbra:var(--vermell);
+    --botoActiuTextHover:var(--negre);
+    --botoActiuFonsHover: #00cec9; /*74b9ff*/
+    --botoActiuOmbraHover: #74b9ff; /*74b9ff*/
+  
+    --botoInactiuFons: #fa9090;
+    --botoInactiuText: var(--vermell);
+  
+    /* botoPetit */
+    --botoPetitActiuFons:var(--groc);
+    --botoPetitActiuText:var(--negre);
+    --botoPetitActiuVora:var(--negre);
+    /* enunciat*/
+
+    --enunciatText: var(--blanc);
+}
+/* -- FINAL Definició de constants a css -- */
+
+/* -- INICI Definició de classes per dotar de color a qualsevol element -- */
+.vermell {
+  color: var(--vermell);
+  /*  color: #d63031 */
+}
+
+.negre {
+  color: var(--negre);
+  /*  color: #d63031 */
+}
+
+.blanc {
+   color: var(--blanc);
+   /*  color: #d63031 */
+ }
+
+/* -- FINAL Definició de classes per dotar de color a qualsevol element -- */
+
+/* -- INICI Definició d'atributs que per defecte tindrà qualsevol element. */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none; 
+}
+/* -- FINAL Definició d'atributs que per defecte tindrà qualsevol element. */
+
+
+/* -- Definició d'atributs que tindran elements especifics. */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color:var(--fons);
+}
+
+header {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-family: Antiga;
+  font-size: 7em;
+  font-weight: 100;
+}
+
+main {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+article {
+  width: 80%;
+  height: 95%;
+  padding: 30px;
+  border: 10px solid var(--seccioVora);
+  background-color: var(--seccioFons);
+  box-shadow: 0px 0px 30px var(--seccioOmbra);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Antiga;
+  text-align: center;
+} 
+/* -- FINAL Definició d'atributs que tindran elements especifics. */
+
+/* -- Definició d'atributs que tindran elements article en concret. */
+article span.titol {
+  font-size: 6em;
+}
+
+article span.subtitol {
+  font-size: 4em;
+}
+
+article span.subtitolText {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 3em;
+ }
+ 
+
+article span.pregunta {
+  font-size: 2em;
+}
+/* -- FINAL Definició d'atributs que tindran elements article en concret. */
+
+div.enunciat p, div.enunciat span {
+  font-family: Enunciat;
+  color: var(--enunciatText);
+  text-align: left;
+}
+
+div.enunciat span {
+  font-size: 1.2em;
+}
+
+div.enunciat p {
+  font-size: 1.5em;
+}
+
+div.respostes {
+  display: flex;
+ justify-content: start;
+ flex-wrap: wrap;
+}
+
+.vora {
+  border: solid black 2px;
+}
+
+label.opcio {
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid #74b9ff;
+  background-color: var(--blanc);
+  border-radius: 10px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+label.opcio.col3 {
+  width: 25%;
+}
+
+label.opcio.col2 {
+  width: 45%;
+}
+
+label.opcio.col1 {
+  width: 100%;
+}
+
+label.opcio:hover {
+  background-color: var(--grisclar);
+  border: 3px solid var(--groc);
+}
+
+label.opcio::selection {
+  border: 3px solid var(--vermell);
+}
+
+label.checked {
+  background-color: var(--inputRadioSelecionatFons);
+  border-color: var(--inputRadioSelecionatVora);
+  color: var(--blanc);
+}
+
+input, select, label, option {
+  overflow: visible;
+  font-family: Enunciat;
+  color: var(--seccioFons);
+  border: 0px solid white;
+  cursor: pointer;
+}
+
+input, select, option {
+  font-size: 1em;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+label.opcio span {
+  width: 50%;
+}
+
+label.opcio input[type=text] {
+  width: 95%;
+}
+
+label.opcio input[type=text]:focus, label.opcio select:focus {
+  outline-color: white;
+  border-bottom: dotted 2px var(--grisclar);
+}
+
+label.opcio select {
+  width: 100%;
+}
+
+label input[type=radio], input[type=text], input[type=checkbox] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+ 
+label input[type=radio]:checked {
+ background-color: var(--inputRadioSelecionatFons);
+}
+
+input[type=checkbox]:checked {
+ background-color: var(--inputRadioSelecionatFons);
+}
+
+
+input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d3d3d3;
+  opacity: 1; /* Firefox */
+}
+
+/* -- Definició d'atributs que tindran elements button en concret. */
+button.boto {
+  overflow: visible;
+  width: 20%;  
+  font-family: Enunciat;
+  font-size: 1.5em;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  align-self: flex-end;
+}
+
+button.actiu {
+color: var(--botoActiuText);
+background-color: var(--botoActiuFons);
+border: 3px solid var(--botoActiuVora);
+box-shadow: var(--botoActiuOmbra);
+cursor: pointer;
+}
+
+button.actiu:hover {
+  color: var(--botoActiuTextHover);
+  background-color: var(--botoActiuFonsHover);
+  box-shadow: 0px 0px 15px var(--botoActiuOmbraHover); /* 74b9ff*/
+  cursor: pointer;
+}
+
+button.inactiu:hover,button.inactiu:disabled {
+  color: var(--botoInactiuText);
+  background-color: var(--botoInactiuFons);
+  box-shadow: 0px 0px 15px var(--botoInactiuText);
+  border: 3px solid var(--botoInactiuText);
+  cursor: not-allowed;
+}
+
+.barraBotonsPetits {
+  width: 100%;
+  text-align:center;
+  font-family: Enunciat;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barraBotonsPetits button{
+  width: 100%;
+  color: var(--botoPetitActiuText);
+  background-color: var(--botoPetitActiuFons);
+  border: 1px solid var(--botoPetitActiuVora);
+  box-shadow: var(--botoPetitActiuOmbra);
+  cursor: pointer;
+}
+
+button.actiu:hover {
+  color: var(--botoActiuTextHover);
+  background-color: var(--botoActiuFonsHover);
+  box-shadow: 0px 0px 15px var(--botoActiuOmbraHover); /* 74b9ff*/
+  cursor: pointer;
+}
+
+/* -- FINAL Definició d'atributs que tindran elements button en concret. */
