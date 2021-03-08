@@ -42,7 +42,7 @@ D'aquesta manera es crearà una carpeta anomenada ***```ActAva20210308```***, a 
 
 ![imatge_0004.png](imatges/imatge_0004.png)
 
-Ara cal que creeu un nou repositori al vostre github amb el nom ```examen20212008```
+Ara cal que creeu un nou repositori al vostre github amb el nom ```ActAva20210308```
 
 ![imatge_0005.png](imatges/imatge_0005.png)
 
