@@ -258,7 +258,7 @@ En aquesta activitat cal que modifiqueu el codi perque quan l'element s'hagi afe
 
 ***
 
-# **Cinquena activitat** ***(3 punts)***
+# **Cinquena activitat** ***(2 punts)***
 
 **Procediment**
 
