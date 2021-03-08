@@ -31,7 +31,7 @@ A continuació cal que obriu una nova finestra de terminal.
 Un cop oberta la nova finestra de terminal, cal que escribiu la següent comanda de git:
 
 ``` git
-git clone https://github.com/eapdagine/????.git  ActAva20210308
+git clone 	https://github.com/joanpardogine/ActAva20210308.git  ActAva20210308
 ```
 
 
