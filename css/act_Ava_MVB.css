@@ -3,3 +3,9 @@
   justify-content: space-between;
 }
   
+.amagarMVB{
+  display:none;
+}
+.mostraMVB{
+ display:flex;
+}
