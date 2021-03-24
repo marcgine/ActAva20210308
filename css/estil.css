@@ -315,3 +315,6 @@ button.actiu:hover {
 }
 
 /* -- FINAL Definició d'atributs que tindran elements button en concret. */
+.noneMVB {
+  display: none;
+}
